@@ -1,0 +1,36 @@
+#restdetails{
+    display: flex;
+    margin-top: 20px;
+}
+
+#restdetails .single-rest-image{
+    width: 40%;
+    margin-right: 50px;
+    margin-left: 50px;
+
+}
+
+#restdetails .single-rest-image{
+    width: 20%;
+    padding: 30px;
+}
+
+#restdetails .single-rest-details{
+    width: 50%;
+    padding: 30px;
+    margin-left: 50px;
+
+}
+#restdetails .single-rest-details h4{
+    padding: 40px 0 20 px 0;
+    font-size:40px;
+}
+
+#restdetails .single-rest-details h2{
+    font-size: 26px;
+}
+
+#restdetails .single-rest-details span{
+    line-height: 26px;
+}
+

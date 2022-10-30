@@ -1,0 +1,51 @@
+
+
+{% load static %}
+<form class="row gx-2 gy-2 align-items-center" method="get" action="{% url 'wo' %}">
+    <div class="col">
+      <div class="input-group-icon"><i class="fas fa-map-marker-alt text-danger input-box-icon"></i>
+        <label class="visually-hidden" for="inputDelivery">Address</label>
+        <!-- <input class="form-control input-box form-foodwagon-control" id="inputDelivery" type="text" placeholder="Enter Your Location" name="area"/> -->
+        <select name="area" required="" id="id_area" style=" background-color:#d9f1e3">
+          <option value="" selected="" >---------</option>   
+          {% for i in area_list %}  
+          <option  value= {{i}} ></option>   
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="d-grid gap-3 col-sm-auto">
+      <button class="btn btn-danger" type="submit">Find Restaurant</button>
+    </div>
+  </form>
+
+
+
+
+
+<div class="container" style="width: 100% ; ">    
+    <!-- <div style ="height: 100%; width:100% ; color:rgb(3, 3, 2) " class="container">
+    <div>Choose the Area</div>
+    <form method="get" action= "{% url 'wo' %}" style="width: 100%">
+        {{ area_list }}
+        <button class="btn btn-white shadow-warning text-warning" type="submit" style="color: rgb(169, 121, 206)">Submit</button>
+    </form>
+    </div>
+  </div> -->
+
+<div class = 'container'>
+    <table>
+        {% for i in results %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.avgRating}}</td>
+            <td>{{i.area}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+
+
+

@@ -1,0 +1,88 @@
+{% extends './common/base.html' %}
+
+{% load static %} 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicons/favicon-16x16.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicons/favicon.ico' %}">
+    <link rel="manifest" href="{% static 'img/favicons/manifest.json' %}">
+    <meta name="msapplication-TileImage" content="{% static 'img/favicons/mstile-150x150.png' %}">
+    <meta name="theme-color" content="#ffffff">
+    <link href="{% static 'css/theme.css' %}" rel="stylesheet" />
+
+</head> -->
+<!-- <body> -->
+    {% block content %}
+    
+    <section class="food_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>
+            Restaurants
+          </h2>
+        </div>
+  
+        <div class="filters-content">
+          <div class="row grid">
+            {% for item in restd %}
+            <div class="col-sm-6 col-lg-4 all pizza" >
+              <div class="box">
+                <div  style="background-color: #dfa904">
+                  <div class="img-box">
+                    <a href="{% url 'details' item.id %}"><img src="{{item.picture.url}}" alt="" ></a> 
+                  </div>
+                  <div class="detail-box" >
+                    <h5 style="color:white; font-size: 1.55rem">
+                      {{item.name}}
+                    </h5>
+                    <p style="color:white;font-size: 15px">
+                      Ratings : {{item.avgRating}}  
+                    </p>
+                    <div class="options">
+                      <h6 style="color:white; font-size:17px; width:fit-content">
+                        Price for two : Rs {{item.cost_for_Two}}<br/>
+                        Locality : {{item.locality}}<br/>
+                        Area : {{item.area}}
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- <div class="btn-box">
+          <a href="">
+            View More
+          </a>
+        </div>
+      </div> -->
+    </section>
+
+
+  
+    
+
+    {% endblock%}
+<!-- 
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/is.min.js' %}"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script> -->
+
+<!-- </body> -->
+<!-- </html> -->
+
+
+

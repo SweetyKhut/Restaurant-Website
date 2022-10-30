@@ -1,0 +1,94 @@
+{% extends './common/base.html' %}
+
+
+{% load static %}
+
+
+{% block content %}
+
+    <section class="py-5 overflow-hidden bg-primary" id="home" style="height: 500px; background: url(/static/images/banner1.jpg); background-size:100%; background-repeat:no-repeat; background-position:center; margin-top: 50px;">
+      </section>
+      <div class="col-lg-7 mx-auto text-center mb-6" style="background-color:white; width:100%">
+        <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3" style="margin-top: 50px; ">Restaurant Detail</h5>
+      </div>
+    <section id = 'restdetails' class="section-p1" style="background-color:white">
+        <div class="single-rest-image" style="background-color:white;">
+            <img src="{{fetchData.picture.url}}" width="100%" id="MainImg" alt="">
+        </div>
+        <div class = "single-rest-details">
+            <h4> {{fetchData.name}}</h4><br>
+            <h2> Cost For Two: {{fetchData.cost_for_Two}} </h2><br>
+            <h2>Description</h2>
+            <span>
+                {{fetchData.desciption}}
+            </span>
+        </div>
+    </section>
+
+    <div class="rev-section" style="margin: auto;padding: 0 1rem;max-width: 1100px;text-align: center;">
+        <h2 class="title" style=" font-size: 2.5rem;text-transform: uppercase;color: rgb(50, 50, 50);margin-bottom: .5rem;">REVIEWS</h2>
+    </div>
+
+
+    <div class="reviews-box" style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;width:100%;float:left">
+        <div class="review box" style="width:500px;box-shadow:2px 2px 30px rgba(0,0,0,0.1); background-color:#ffffff;padding:20px;margin:15px;cursor:pointer">
+            
+            {% for i in all_reviews %}        
+            {% if fetchData.name == i.name.name %}      
+            <div class="box-top" style="display: flex; justify-content:space-between; align-items:center; margin-bottom:20px">
+                <div class="profile" style="display: flex; align-items:center">
+                    <div class="name-user" style="display: flex; flex-direction:column">
+                        <strong style="color:#3d3d3d; font-size:1.1rem; letter-spacing:0.5px">{{ i.user }}</strong>
+                    </div>
+                </div>
+                <div class="reviews" style="color: #f9d71c;">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+            <div class="comment">
+                <p style="font-size:0.9rem;color:#4b4b4b">{{ i.content }}
+                </p>
+            </div>
+            {% endif %}
+         {% endfor%}
+
+
+        </div>
+    </div><br>
+
+    
+        <div class="container-fluid py-4">
+            <div class="container pt-5 pb-3"><br>
+                <h2 class="display-4 text-uppercase text-center mb-5">Write your review</h2>
+                <div class="row" style=" display:flex;justify-content:center">
+                    <div class="col-lg-7 mb-2 align-items-center justify-content-center;display:flex">
+                        <div  style="padding: 30px; background-color: beige; display:flex;justify-content:center">
+                            <form action = "" method="post">
+                                {% csrf_token %}
+
+                                <div class="row">
+                                    <!-- <div class="col-6 form-group">
+                                        <input type="text" class="form-control p-4" placeholder="Your Name" required="required">
+                                    </div> -->
+                                    <div class="col-6 form-group">
+                                        <input type="number" class="form-control p-4" placeholder="Rate this website" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control py-3 px-4" rows="5" placeholder="Review" name="content" required="required"></textarea>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-primary py-3 px-5" type="submit">Submit Review</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
