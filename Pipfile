@@ -11,6 +11,8 @@ django-import-export = "*"
 django-collectionfield = "*"
 pillow = "*"
 gunicorn = "*"
+psycopg2 = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 

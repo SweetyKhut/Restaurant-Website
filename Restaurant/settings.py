@@ -51,7 +51,6 @@ THIRD_PARTY_APPS = [
     'widget_tweaks',
     'crispy_forms',
     'import_export',
-    'gunicorn',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + MY_APPS + THIRD_PARTY_APPS
