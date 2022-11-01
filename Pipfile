@@ -13,6 +13,7 @@ djangorestframework-filters = "*"
 "kivymd-extensions.sweetalert" = "*"
 django-collectionfield = "*"
 pillow = "*"
+gunicorn = "*"
 
 [dev-packages]
 
