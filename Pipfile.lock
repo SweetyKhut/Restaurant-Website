@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "363e041a442a7aba468b4c149f55ae7a04cbf76d61696f8d02bf9b9d10c6af84"
+            "sha256": "711b97d7d52270ff80235fe9045acc0b84ee42255ca55b2947928e15e12b4a17"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -192,7 +192,7 @@
                 "sha256:f044d7e6a9f839222e44f9ae0441ae25ff42e35a5c1b7d1ea9a4d0845dd57172",
                 "sha256:fdc3de5ead670a8ee0bb411b603cabeaecf7fe277cf99cd70c9585cd964f19a2"
             ],
-            "markers": "sys_platform == 'win32'",
+            "index": "pypi",
             "version": "==0.3.3"
         },
         "kivy-deps.glew": {

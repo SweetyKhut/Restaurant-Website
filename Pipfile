@@ -14,6 +14,7 @@ djangorestframework-filters = "*"
 django-collectionfield = "*"
 pillow = "*"
 gunicorn = "*"
+"kivy-deps.angle" = "*"
 
 [dev-packages]
 
