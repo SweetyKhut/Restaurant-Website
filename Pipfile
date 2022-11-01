@@ -8,11 +8,9 @@ django = "*"
 django-widget-tweaks = "*"
 django-crispy-forms = "*"
 django-import-export = "*"
-django-filter = "*"
 django-collectionfield = "*"
 pillow = "*"
 gunicorn = "*"
-pywin32 = "*"
 
 [dev-packages]
 
