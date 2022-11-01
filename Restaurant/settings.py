@@ -51,6 +51,7 @@ THIRD_PARTY_APPS = [
     'widget_tweaks',
     'crispy_forms',
     'import_export',
+    'gunicorn',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + MY_APPS + THIRD_PARTY_APPS
@@ -58,7 +59,7 @@ INSTALLED_APPS = DEFAULT_APPS + MY_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
